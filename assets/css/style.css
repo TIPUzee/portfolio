@@ -1,0 +1,180 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--nav-box-height: 4rem;
+}
+
+
+/* body */
+body {
+	position: relative;
+	overflow: hidden;
+}
+
+/* main */
+.main {
+	height: 100vh;
+	width: 100vw;
+}
+
+.sub-main {
+	height: inherit;
+	width: inherit;
+}
+
+
+
+/* nav */
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: var(--nav-box-height);
+	background-image: linear-gradient(45deg, yellow, yellow, yellow);
+	z-index: 3;
+}
+
+.nav-box {
+	height: inherit;
+}
+
+.nav-link {
+	background-color: rgba(0, 0, 0, 0.00);
+	transition-duration: 0.3s;
+	
+	display: inline-block;
+	height: inherit;
+	min-width: 8rem;
+	font-size: larger;
+	font-weight: 700;
+}
+
+.nav-link span {
+	display: inline-block;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+
+
+
+/* main */
+.main-content {
+	width: 100%;
+	height: calc(100vh - var(--nav-box-height));
+	position: absolute;
+	top: var(--nav-box-height);
+}
+
+.hero-image {
+	background-image: url("../images/anime - yellow img.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	filter: blur(8px);
+	
+	height: inherit;
+	width: inherit;
+	position: absolute;
+	transform: scale(1.5);
+}
+
+.hero-image-overlay {
+
+	height: inherit;
+	width: inherit;
+}
+
+.mini-hero-img-box {
+	box-shadow: inset 0 0 15px red;
+	
+	width: 40%;
+	height: 60%;
+	
+	position: absolute;
+	top: 50%;
+	right: 8rem;
+	transform: translateY(-50%);
+	
+	z-index: 4;
+}
+
+.mini-hero-img {
+	background-image: url("../images/anime - yellow img.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.mini-hero-img::before {
+	content: '';
+	background-color: yellow;
+	box-shadow: 0 0 10px yellow;
+
+	display: inline-block;
+	height: 4rem;
+	width: 100vw;
+
+	position: absolute;
+	top: 70%;
+	left: calc(-100vw - 2rem);
+}
+
+.mini-hero-img::after {
+	content: '';
+	background-color: yellow;
+	box-shadow: 0 0 10px yellow;
+
+	display: inline-block;
+	height: 4rem;
+	width: 100vw;
+
+	position: absolute;
+	top: 20%;
+	left: calc(100% + 2rem); 
+}
+
+.mini-hero-img-frame {
+	height: 100%;
+	width: 100%;
+	outline: 3rem solid yellow;
+}
+
+.mini-hero-img-frame::before {
+	content: '';
+	
+	display: block;
+	height: 100%;
+	width: 100%;
+	box-shadow: 0 0 15px 3rem yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* animation */
+.nav-link:hover {
+	background-color: black;
+	color: white;
+}
