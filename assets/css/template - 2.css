@@ -47,6 +47,7 @@ body {
 	--color-footer-site-link: rgba(159, 188, 46, 1);
 	--px-subsec: 10px;
 	--w-sidenav-menubar: 250px;
+	--size-sidenav-menubar-badge-icon: 22px;
 }
 
 
@@ -151,11 +152,30 @@ body {
 	-moz-transition: background-color 0.3s ease;
 	-ms-transition: background-color 0.3s ease;
 	-o-transition: background-color 0.3s ease;
+
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
 }
 
 #sidenav #menubar .doc-nav-link:hover {
 	background-color: var(--bg-light-light-dark-blue);
 }
+
+#sidenav #menubar .badge {
+	display: block;
+	background-color: var(--bg-light-light-dark-blue);
+	width: var(--size-sidenav-menubar-badge-icon);
+	height: var(--size-sidenav-menubar-badge-icon);
+	line-height: var(--size-sidenav-menubar-badge-icon);
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+
 
 
 
