@@ -1,7 +1,3 @@
-function pageLoaded() {
-	console.log('fn call - pageLoaded()');
-	document.getElementById('under-construction').style.display="none";
-}
 
 let sidenav_menubar_opened = false;
 
