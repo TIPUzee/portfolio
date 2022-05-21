@@ -5,21 +5,262 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Template 2</title>
-
 	<!-- CSS only -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<!-- JavaScript Bundle with Popper -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-	<!-- stylesheet -->
-	<link rel="stylesheet" href="../css/template - 2.css">
-</head>
-<body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	
-	<div id="under-construction" class="position-absolute w-100 h-100 d-flex justify-content-center align-items-center bg-dark flex-column-reverse">
-		<h1 class="text-white-50 mt-4">Under Construction</h1>
-		<div class="loader"></div>
+	<!-- font awesome -->
+	<script src="https://kit.fontawesome.com/04a7661618.js" crossorigin="anonymous"></script>
+	
+	<!-- stylesheet -->
+	<link rel="stylesheet" href="../css/n-margin-padding.css">
+	<link rel="stylesheet" href="../css/template - 2.css">
+	<script src="../js/template - 2.js"></script>
+
+</head>
+
+<body onload="pageLoaded()">
+
+<div id="under-construction" class="position-absolute w-100 h-100 justify-content-center align-items-center bg-dark flex-column-reverse">
+	<h1 class="text-white-50 mt-4">Under Construction</h1>
+	<div class="loader"></div>
+</div>
+
+
+<!-- page-wrapper -->
+<div id="page-wrapper">
+
+<!-- sidenav -->
+<div id="sidenav">
+	<div id="togglerbar">
+		<button id="toggle-btn" onclick="sidenav_menu_toggle();"><i class="fa-solid fa-bars"></i></button>
+	</div>
+	<ul id="menubar">
+		<li class="doc-nav-item translated"><a class="doc-nav-link" href="#">Home</a></li>
+		<li class="doc-nav-item translated"><a class="doc-nav-link" href="#">Product</a></li>
+		<li class="doc-nav-item translated"><a class="doc-nav-link" href="#">Company</a></li>
+		<li class="doc-nav-item translated"><a class="doc-nav-link" href="#">Contact</a></li>
+	</ul>
+</div>
+
+<!-- container -->
+<div id="main-container" class="container-fluid">
+	<!-- navbar -->
+	<div id="navbar" class="row">
+		<div class="col d-flex justify-content-center align-items-stretch">
+			<div id="brand" class="text-center d-flex align-items-center"><a href="#" class="link user-select-none font-style-inheret">Site Logo</a></div>
+		</div>
+	</div>
+
+	<!-- header carousel -->
+	<div id="main-header" class="row">
+		<div id="main-carousel" class="col carousel slide" data-bs-ride="">
+			<div class="carousel-inner">
+				<img class="carousel-item active" src="../image/programming (1).jpg" alt="image">
+				<img class="carousel-item" src="../image/programming (2).jpg" alt="image">
+				<img class="carousel-item" src="../image/programming (3).jpg" alt="image">	
+			</div>
+
+			<div id="controls">
+				<div class="container mx-auto">
+					<div class="row">
+						<div class="col">
+							<div id="caption">
+								<h3 class="font-style-inheret">Build new layout in 10 minutes!</h3>
+							</div>
+							
+							<ol class="carousel-indicators">
+								<li data-bs-target="#main-carousel" data-bs-slide-to="0" class="active"></li>
+								<li data-bs-target="#main-carousel" data-bs-slide-to="1"></li>
+								<li data-bs-target="#main-carousel" data-bs-slide-to="2"></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	
+	<!-- about section -->
+	<div id="aboutSec" class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 subsec">
+					<i class="fa-solid fa-paper-plane"></i>
+					<h2 class="heading">About</h2>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit cum maiores molestias veritatis excepturi, impedit repudiandae minus laborum corporis ratione placeat vel.</p>
+				</div>
+				<div class="col-lg-3 col-md-6 subsec">
+					<i class="fa-solid fa-star"></i>
+					<h2 class="heading">Company</h2>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit cum maiores molestias veritatis excepturi, impedit repudiandae minus laborum corporis ratione placeat vel.</p>
+				</div>
+				<div class="col-lg-3 col-md-6 subsec">
+					<i class="fa-solid fa-comment"></i>
+					<h2 class="heading">Services</h2>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit cum maiores molestias veritatis excepturi, impedit repudiandae minus laborum corporis ratione placeat vel.</p>
+				</div>
+				<div class="col-lg-3 col-md-6 subsec">
+					<i class="fa-solid fa-envelope"></i>
+					<h2 class="heading">Contact</h2>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit cum maiores molestias veritatis excepturi, impedit repudiandae minus laborum corporis ratione placeat vel.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- amazing section -->
+	<div id="amazingSec" class="row">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-8 subsec">
+					<h2 class="heading">Amazing title</h2>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit cum maiores molestias veritatis excepturi, impedit repudiandae minus laborum corporis ratione placeat vel.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- gallery -->
+	<div id="gallery" class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col subsec">
+					<h2 class="heading">Gallery</h2>
+					<div id="images">
+						<img class="gallery-img" src="../image/working team (1).jpg" alt="gallery image - 1">
+						<img class="gallery-img" src="../image/working team (2).jpg" alt="gallery image - 2">
+						<img class="gallery-img" src="../image/working team (3).jpg" alt="gallery image - 3">
+						<img class="gallery-img" src="../image/working team (4).jpg" alt="gallery image - 4">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- responsive components -->
+	<div id="responsive" class="row">
+		<div class="container">
+			<div class="row">
+				<div id="responsive-carousel" class="carousel slide col" data-bs-ride="carousel">
+					<!-- slides -->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="subsec">
+								<h2 class="heading">Responsive components 1</h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate temporibus culpa tenetur molestiae sit, sequi amet, recusandae id, corrupti dolorem ipsam velit laborum? Magni, odio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, mollitia?</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="subsec">
+								<h2 class="heading">Responsive components 2</h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate temporibus culpa tenetur molestiae sit, sequi amet, recusandae id, corrupti dolorem ipsam velit laborum? Magni, odio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, mollitia?</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="subsec">
+								<h2 class="heading">Responsive components 3</h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate temporibus culpa tenetur molestiae sit, sequi amet, recusandae id, corrupti dolorem ipsam velit laborum? Magni, odio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, mollitia?</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- indicators -->
+					<ol class="carousel-indicators">
+						<li data-bs-target="#responsive-carousel" data-bs-slide-to="0" class="active"></li>
+						<li data-bs-target="#responsive-carousel" data-bs-slide-to="1"></li>
+						<li data-bs-target="#responsive-carousel" data-bs-slide-to="2"></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- footer -->
+	<footer id="footer" class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col subsec">
+					<p>Copyright 2019, Vision Design - graphic zoo</p>
+					<a id="site-link" href="#">Design and coding by Responsee Team</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
