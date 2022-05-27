@@ -61,3 +61,46 @@ slider.addEventListener('mousemove', (e) =>
 
 	slider2.style.left = `${parseFloat(window.getComputedStyle(slider2).left) - dragX}px`;
 });
+
+
+slider.addEventListener('touchstart', (e) =>
+{
+	e.preventDefault();
+	console.log('touch start');
+	pressed = true;
+	mouseX = e.clientX;
+	mouseY = e.clientY;
+});
+slider.addEventListener('touchend', (e) => 
+{
+	console.log('touch end');
+	pressed = false;
+	moving = false;
+	preventSliding = false;
+})
+slider.addEventListener('touchmove', (e) =>
+{
+	if (!pressed) { return; };
+	if (preventSliding)
+	{
+		console.log('Prevention');
+		return;
+	}
+
+	e.preventDefault();
+	let dragX = mouseX - e.changedTouches[0].clientX;
+	let dragY = mouseY - e.changedTouches[0].clientY;
+
+	if (Math.abs(dragY) > Math.abs(dragX) && !moving) 
+	{
+		console.log('Prevention Starts');
+		preventSliding = true;
+		return; 
+	}
+	moving = true;
+	mouseX = e.changedTouches[0].clientX;
+	console.log(dragX);
+
+	slider2.style.left = `${parseFloat(window.getComputedStyle(slider2).left) - dragX}px`;
+});
+
