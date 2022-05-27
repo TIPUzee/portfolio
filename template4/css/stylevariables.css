@@ -1,0 +1,11 @@
+:root 
+{
+	/* main container */
+	--bg-dark-blue: rgb(0, 38, 51);
+
+	/* navigation */
+	--light-red-color: rgb(200, 16, 16);
+
+	/* carousel */
+	--carousel-inner-position-for-controls: 25px;
+}
