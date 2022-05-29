@@ -41,7 +41,7 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	align-items: center;
 	/* temp */
 	min-height: 200vh;
-	background-color: yellow;
+	background-color: var(--bg-dark-blue);
 }
 /* everything directly inside the main container */
 #main > * {
@@ -60,6 +60,7 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	height: 110px;
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 8px !important;
 	/* temp */
 	background-color: var(--bg-dark-blue);
 }
@@ -76,7 +77,7 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	width: -webkit-min-content;
 	width: -moz-min-content;
 	width: min-content;
-	padding-left: 35px !important;
+	padding-left: 40px !important;
 }
 #nav #brand-wrapper h1 {
 	/* responsive */
@@ -97,12 +98,13 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 #nav #links-group {
 	text-transform: uppercase;
 	display: flex;
+	padding-right: 10px !important;
 }
 #nav #links-group .link {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 600;
 	font-size: 14px;
-	letter-spacing: 0;
+	letter-spacing: 1px;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;
@@ -116,8 +118,8 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	/* responsive */
-	padding-left: 18px !important;
-	padding-right: 18px !important;
+	padding-left: 22px !important;
+	padding-right: 22px !important;
 	padding-top: 16px !important;
 	padding-bottom: 18px !important;
 }
@@ -135,10 +137,13 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 /* ---------------------------------- */
 /* carousel */
 #carousel {
-	height: 550px;
-	width: 100%;
+	height: 530px;
+	width: calc(100% - 16px);
 	position: relative;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 	pointer-events: auto;
 	overflow: hidden;
 	cursor: default;
@@ -155,7 +160,7 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	z-index: 990;
 	left: -100%;
 	pointer-events: none;
-	/*transition*/:;
+	/*transition*/
 	transition: all 100ms ease;
 	-webkit-transition: all 100ms ease;
 	-moz-transition: all 100ms ease;
@@ -176,9 +181,9 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	height: 100%;
 	top: 0;
 	left: 0;
-}
-/* for fade effects */
-#carousel .sub-slide {
+	width: 100%;
+	height: 100%;
+	/* transition */;
 	transition: opacity 800ms ease;
 	-webkit-transition: opacity 800ms ease;
 	-moz-transition: opacity 800ms ease;
@@ -206,7 +211,7 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	left: 50%;
 	width: 100%;
 	text-transform: uppercase;
-		/* transform */:;
+		/* transform */
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
@@ -219,9 +224,13 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	height: 100%;
 	-o-object-fit: cover;
 	   object-fit: cover;
+	-o-object-position: top;
+	   object-position: top;
 }
 /* slide's heading */
 #carousel #slider .heading {
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
 	width: fit-content;
 	background-color: var(--light-red-color);
 	color: white;
@@ -234,6 +243,8 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 }
 /* slide's description */
 #carousel #slider .desc {
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
 	width: fit-content;
 	background-color: white;
 	color: black;
@@ -279,7 +290,8 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	display: grid;
 	grid-template-columns: repeat(1fr, 3);
 	grid-auto-flow: column;
-	column-gap: 2px;
+	-moz-column-gap: 2px;
+	     column-gap: 2px;
 	position: absolute;
 	left: var(--carousel-inner-position-for-controls);
 	bottom: var(--carousel-inner-position-for-controls);
@@ -293,7 +305,7 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	background-color: rgba(255, 255, 255, 0.354);
 	width: 15px;
 	height: 15px;
-	/*transition*/:;
+	/*transition*/
 	cursor: pointer;
 	transition: all 200ms ease;
 	-webkit-transition: all 200ms ease;
