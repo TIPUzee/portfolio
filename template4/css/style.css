@@ -18,7 +18,7 @@
 	color: white;
 }
 /* temp */
-/* body { overflow-x: hidden; } */
+body { width: 100%; overflow-x: hidden; }
 a, a:hover { 
 	text-decoration: none; 
 	color: inherit; 
@@ -81,6 +81,7 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 #nav #brand-wrapper h1 {
 	/* responsive */
 	font-size: 40px;
+	font-weight: 700;
 }
 #nav #brand-wrapper #logo-img {
 	max-height: 45px;
@@ -101,7 +102,7 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	font-family: 'Oswald', sans-serif;
 	font-weight: 600;
 	font-size: 14px;
-	letter-spacing: 1.3px;
+	letter-spacing: 0;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;
@@ -115,8 +116,8 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	/* responsive */
-	padding-left: 20px !important;
-	padding-right: 20px !important;
+	padding-left: 18px !important;
+	padding-right: 18px !important;
 	padding-top: 16px !important;
 	padding-bottom: 18px !important;
 }
@@ -140,6 +141,7 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	user-select: none;
 	pointer-events: auto;
 	overflow: hidden;
+	cursor: default;
 }
 /* slider */
 #carousel #slider {
@@ -147,18 +149,69 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	width: 500%;
 	max-width: unset;
 	display: grid;
-	grid-template-columns: repeat(1fr, 5);
+	grid-template-columns: repeat(5, minmax(0, 1fr));
 	grid-auto-flow: column;
-	/* default position */
-	position: absolute;
+	/*defaultposition*/position: absolute;
 	z-index: 990;
 	left: -100%;
 	pointer-events: none;
+	/*transition*/:;
+	transition: all 100ms ease;
+	-webkit-transition: all 100ms ease;
+	-moz-transition: all 100ms ease;
+	-ms-transition: all 100ms ease;
+	-o-transition: all 100ms ease;
 }
 /* slider's slides */
 #carousel .slide {
 	width: 100%;
 	height: 100%;
+	background-color: var(--bg-light-blue);
+	box-shadow: inset 0 3px 30px var(--bg-dark-blue-shadow);
+	position: relative;
+}
+/* subslides */
+#carousel .sub-slide {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+/* for fade effects */
+#carousel .sub-slide {
+	transition: opacity 800ms ease;
+	-webkit-transition: opacity 800ms ease;
+	-moz-transition: opacity 800ms ease;
+	-ms-transition: opacity 800ms ease;
+	-o-transition: opacity 800ms ease;
+}
+/* sub-slides' opacity */
+#carousel .slide[slide="0"] .sub-slide[sub-slide="0"], 
+#carousel .slide[slide="1"] .sub-slide[sub-slide="1"], 
+#carousel .slide[slide="2"] .sub-slide[sub-slide="2"] {
+	opacity: 1;
+}
+#carousel .slide[slide="0"] .sub-slide[sub-slide="1"], 
+#carousel .slide[slide="0"] .sub-slide[sub-slide="2"], 
+#carousel .slide[slide="1"] .sub-slide[sub-slide="0"], 
+#carousel .slide[slide="1"] .sub-slide[sub-slide="2"], 
+#carousel .slide[slide="2"] .sub-slide[sub-slide="0"], 
+#carousel .slide[slide="2"] .sub-slide[sub-slide="1"] {
+	opacity: 0;
+}
+/* content wrapper */
+#carousel .content-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	text-transform: uppercase;
+		/* transform */:;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
 }
 /* slide's images */
 #carousel .slide-img {
@@ -169,13 +222,26 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 }
 /* slide's heading */
 #carousel #slider .heading {
-	/* temp */
-	display: none;
+	width: fit-content;
+	background-color: var(--light-red-color);
+	color: white;
+	font-size: 54px;
+	font-weight: 700;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
 }
 /* slide's description */
 #carousel #slider .desc {
-	/* temp */
-	display: none;
+	width: fit-content;
+	background-color: white;
+	color: black;
+	font-size: 20px;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
 }
 /* slider buttons */
 #carousel .slider-btn {
@@ -218,6 +284,9 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	left: var(--carousel-inner-position-for-controls);
 	bottom: var(--carousel-inner-position-for-controls);
 	z-index: 991;
+	/* for pointer */
+	padding: 5px !important;
+	cursor: pointer;
 }
 /* slider indicators */
 #carousel .indicator {
