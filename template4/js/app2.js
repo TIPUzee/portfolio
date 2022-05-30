@@ -3,9 +3,9 @@
 
 
 ////// mousedown event 
-// carousel.addEventListener('mousedown', mouseDownHandler);
-// carousel.addEventListener('mouseup', mouseUpHandler);
-// carousel.addEventListener('mousemove', mouseMoveHandler);
+carousel.addEventListener('mousedown', mouseDownHandler);
+carousel.addEventListener('mouseup', mouseUpHandler);
+carousel.addEventListener('mousemove', mouseMoveHandler);
 carousel.addEventListener('touchstart', touchStartHandler);
 carousel.addEventListener('touchend', touchEndHandler);
 carousel.addEventListener('touchmove', touchMoveHandler);
