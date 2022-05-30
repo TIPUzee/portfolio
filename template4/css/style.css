@@ -85,9 +85,9 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	font-weight: 700;
 }
 #nav #brand-wrapper #logo-img {
-	max-height: 45px;
-	filter: hue-rotate(155deg);
-	-webkit-filter: hue-rotate(155deg);
+	height: 45px;
+	width: 45px;
+	background: transparent url(../img/logo-croped.png) no-repeat center center / cover;
 }
 /* links */
 #nav #links-group-wrapper {
@@ -222,10 +222,16 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 #carousel .slide-img {
 	width: 100%;
 	height: 100%;
-	-o-object-fit: cover;
-	   object-fit: cover;
-	-o-object-position: top;
-	   object-position: top;
+	background: transparent no-repeat top center / cover;
+}
+#carousel .sub-slide[sub-slide="0"] .slide-img {
+	background-image: url("../img/slider-1.jpg");
+}
+#carousel .sub-slide[sub-slide="1"] .slide-img {
+	background-image: url("../img/slider-2.jpg");
+}
+#carousel .sub-slide[sub-slide="2"] .slide-img {
+	background-image: url("../img/slider-3.jpg");
 }
 /* slide's heading */
 #carousel #slider .heading {
@@ -305,6 +311,7 @@ i, i::before { font-size: inherit; font-weight: inherit; color: inherit; }
 	background-color: rgba(255, 255, 255, 0.354);
 	width: 15px;
 	height: 15px;
+	border: none;
 	/*transition*/
 	cursor: pointer;
 	transition: all 200ms ease;
