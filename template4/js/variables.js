@@ -4,8 +4,7 @@
 // //////////////////////////////////// //
 // //////////////////////////////////// //
 
-////// mouse move //////
-////// mouse move //////
+
 let carousel = document.querySelector('#carousel');
 let slider = document.querySelector('#carousel #slider');
 let firstSlide = slider.firstElementChild;
@@ -15,8 +14,9 @@ let totalMainSlides = 3;
 let originalTransition = window.getComputedStyle(slider).transition;
 
 let body = document.getElementsByTagName('body');
-// let mouseX = 0;
+let mouseX = 0;
 let mouseY = 0;
+let verticalMove = 0;
 let pressed = false;
 
 let moving = false;
@@ -32,3 +32,17 @@ let defaultCursor = carousel.style.cursor;
 let currIndicator = 0;
 let indicators = document.querySelectorAll('#carousel .indicator');
 
+
+
+// //////////////////////////////////// //
+// //////////////////////////////////// //
+// /////////// menu toggler /////////// //
+// //////////////////////////////////// //
+// //////////////////////////////////// //
+let togglers = document.querySelectorAll('[aTogglerFor]');
+let togglersTargets = [];
+
+for (let i = 0; i < togglers.length; i++)
+{
+	togglersTargets = document.querySelectorAll(togglers[i].getAttribute('aTogglerFor'));
+}

@@ -1,13 +1,36 @@
 :root 
 {
+	--main-sections-height: 540px;
+	--main-sections-height-2: 570px;
+	--main-sections-height-3: 380px;
+	--main-sections-height-4: 310px;
+	--main-small-sections-height: 400px;
+	--section-inner-x-padding: 40px;
+	--section-inner-y-padding: 40px;
+	--light-black-color: rgb(69, 69, 69);
+	
 	/* main container */
 	--bg-dark-blue: rgb(0, 38, 51);
 	--bg-light-blue: rgb(6, 46, 59);
 	--bg-dark-blue-shadow: rgb(0, 4, 5);
+	--bd-red: rgb(200, 16, 16);
+	--bg-light-light-blue: rgb(0, 88, 129);
+	--bg-light-yellow: rgb(228, 166, 0);
+	--bg-light-green-blue: rgb(0, 181, 166);
 
 	/* navigation */
 	--light-red-color: rgb(200, 16, 16);
 
 	/* carousel */
 	--carousel-inner-position-for-controls: 20px;
+
+	/* feature section */
+	--feature-icon-size: 60px;
+
+	/* section 5 */
+	--section-links-color-1: rgb(59, 89, 152);
+	--section-links-color-2: rgb(85, 172, 280);
+	--section-links-color-3: rgb(187, 0, 0);
+	--section-links-color-4: rgb(0, 123, 181);
+
 }

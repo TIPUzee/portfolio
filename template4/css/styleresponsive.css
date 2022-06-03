@@ -1,0 +1,149 @@
+/* width */
+/* width */
+/* width */
+/* less than */
+/* less than */
+/* 1100px */
+/* 1100px */
+/* 1100px */
+@media screen and (max-width: 1100px) 
+{
+#mainSection1 #subSec1 {
+	width: 100%;
+}
+
+}
+
+
+
+
+
+
+
+
+/* width */
+/* width */
+/* width */
+
+/* less than */
+/* 810px */
+/* 810px */
+@media screen and (max-width: 811px) 
+{
+/* nav */
+#nav {
+	--nav-height: 60px;
+	height: var(--nav-height);
+	justify-content: stretch;
+	padding-bottom: 0 !important;
+}
+#nav #brand-wrapper h1 {
+	font-size: 26px;
+}
+#nav #brand-wrapper {
+	width: 100%;
+	padding-left: 0 !important;
+	justify-content: center;
+}
+#nav #brand-wrapper #logo-img {
+	height: 30px;
+	width: 30px;
+}
+#nav #menu-toggler {
+	display: block;
+	background-color: var(--light-black-color);
+	border: none;
+	width: var(--nav-height);
+	height: var(--nav-height);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+}
+#nav #menu-toggler .icon {
+	border: none;
+	font-size: 32px;
+	pointer-events: none;
+}
+#nav #menu-toggler #cancel.icon {
+	display: none;
+}
+#nav #links-group-wrapper {
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	background-color: var(--light-black-color);
+	z-index: 99999;
+	align-items: flex-start;
+	padding-top: 60px !important;
+	/*default-nottoggled*/:;
+	transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	/*transition*/:;
+	transition: all 400ms ease;
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+}
+#nav #links-group-wrapper.shown {
+	transform: translateX(0%);
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	-o-transform: translateX(0%);
+}
+#nav #links-group {
+	width: 100%;
+	padding-right: 0 !important;
+	flex-direction: column;
+}
+#nav #links-group .link {
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+
+
+
+#carousel #slider .heading {
+	font-size: 40px;
+}
+#carousel #slider .desc {
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+/* width height */
+/* less than */
+/* 810px 700p */
+@media screen and (max-width: 811px) and (max-height: 681px) 
+{
+#carousel {
+	height: calc(100vh - 60px);
+	min-height: 550px !important;
+}
+}
+
+
+
+
+
+

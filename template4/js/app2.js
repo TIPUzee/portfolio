@@ -10,23 +10,6 @@ carousel.addEventListener('touchstart', touchStartHandler);
 carousel.addEventListener('touchend', touchEndHandler);
 carousel.addEventListener('touchmove', touchMoveHandler);
 
-////// mouseup event
-////// mousemove event
-////// Touch //////
-////// Touch //////
-////// Touch //////
-////// Touch //////
-////// Touch //////
-
-////// touch start
-
-////// touch end
-
-////// touch end
-
-
-
-
 
 
 
@@ -36,10 +19,17 @@ carousel.addEventListener('touchmove', touchMoveHandler);
 
 // //////////////////////////////////// //
 // //////////////////////////////////// //
-// //////////Carousel Slider/////////// //
+// /////////// menu toggler /////////// //
 // //////////////////////////////////// //
 // //////////////////////////////////// //
 
-////// Next Prev btn //////
-////// Next Prev btn //////
-////// Next Prev btn //////
+for (let i = 0; i < togglers.length; i++)
+{
+	if (togglers[i].getAttribute('addClass') != null)
+	{
+		togglers[i].addEventListener('click', (evnt) => 
+		{
+			addClass(evnt, togglersTargets[i]);
+		});
+	}
+}

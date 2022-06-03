@@ -3,7 +3,6 @@
 //////// Mouse Down Handler ////////
 function mouseDownHandler(e)
 {
-	console.log('down');
 	count++;
 	e.preventDefault();
 	if (waiting) 
@@ -23,7 +22,9 @@ function mouseDownHandler(e)
 function touchStartHandler(e)
 {
 	count++;
-	e.preventDefault();
+	// e.preventDefault();
+	let a;
+	console.log(a);
 	if (waiting) 
 	{
 		return;
@@ -31,11 +32,13 @@ function touchStartHandler(e)
 	
 	pressed = true;
 	mouseX = e.touches[0].screenX;
+	mouseY = e.touches[0].screenY;
 	slideHaveMovedX = 0;
 	
 	// custom
 	slider.style.transition = 'none';
 	carousel.style.cursor = 'grabbing';
+	verticalMove = 0;
 }
 
 
@@ -152,12 +155,18 @@ function mouseUpHandler(e)
 
 function touchEndHandler(e)
 {
+	if (verticalMove == 1) 
+	{ 
+		verticalMove = 0;
+		return; 
+	}
 	if (!pressed)
 	{
 		return;
 	}
 	waiting = true;
 	pressed = false;
+	carousel.style.cursor = defaultCursor;
 	
 	if (Math.abs(slideHaveMovedX) > 150)
 	{
@@ -197,7 +206,7 @@ function touchEndHandler(e)
 							slides[currSlideNo].classList.remove('active');
 							currSlideNo = 1;
 							slides[currSlideNo].classList.add('active');
-						}, 100);
+						}, 110);
 					}
 					else { waiting = false; }
 					break;
@@ -288,11 +297,26 @@ function touchMoveHandler(e)
 {
 	if (waiting == true) { return; };
 	if (!pressed) { return; };
-	
-	e.preventDefault();
+	if (verticalMove == 1) { return; }
 	
 	let dragX = mouseX - e.changedTouches[0].screenX;
+	let dragY = mouseY - e.changedTouches[0].screenY;
 	mouseX = e.changedTouches[0].screenX;
+	mouseY = e.changedTouches[0].screenX;
+
+	if (verticalMove == 0)
+	{
+		if (Math.abs(dragX) < Math.abs(dragY))
+		{
+			verticalMove = 1;
+			return;
+		}
+		else {
+			verticalMove = -1;
+		}
+	}
+	e.preventDefault();
+
 	
 	let slideWidth = parseFloat(window.getComputedStyle(firstSlide).width);
 	
@@ -356,7 +380,6 @@ function moveToPrevSlide()
 
 function moveToSlide(number) 
 {
-	console.log('clicked');
 	let slideNumbers = number;
 
 	waiting = true;
