@@ -407,3 +407,15 @@ function moveToSlide(number)
 	
 	waiting = false;
 }
+
+
+
+
+
+function reCalcCarouselSlidePos() {
+	slider.style.transition = 'none';
+
+	let slideWidth = parseFloat(window.getComputedStyle(firstSlide).width);
+	let left = slideWidth * currSlideNo * -1;
+	slider.style.left = `${left}px`; 
+}

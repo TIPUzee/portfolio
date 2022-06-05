@@ -33,3 +33,9 @@ for (let i = 0; i < togglers.length; i++)
 		});
 	}
 }
+
+
+
+
+window.addEventListener('resize', reCalcCarouselSlidePos);
+
