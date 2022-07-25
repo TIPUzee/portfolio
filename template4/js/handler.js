@@ -24,7 +24,6 @@ function touchStartHandler(e)
 	count++;
 	// e.preventDefault();
 	let a;
-	console.log(a);
 	if (waiting) 
 	{
 		return;
